@@ -1,0 +1,333 @@
+/* %hamburger-line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 8px auto;
+  background-color: #717171;
+  transition: all 0.3s ease-in-out;
+} */
+
+.header {
+  font-weight: $primary-font-weight;
+  background-color: $bg-color-section;
+
+  .main-header {
+    font-size: 45px;
+    margin: 14px 0 44px 0;
+    font-family: $primary-font-family;
+    color: #717171;
+  }
+
+  .nav {
+    @include flexbox($flex-wrap: nowrap);
+    @include flex-align(space-between, center);
+
+    padding: 32px 15px;
+
+    .logo {
+      height: 22px;
+      align-self: flex-start;
+      margin: 20px 15px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .menu {
+      flex-basis: 501px;
+      @include flexbox($flex-wrap: nowrap);
+      gap: 47px;
+
+      .menu-item {
+        padding: 20px 0;
+        line-height: 50px;
+        font-family: $secondary-font-family;
+        font-weight: $primary-font-weight;
+
+        &.active {
+          a {
+            color: #E06733;
+            font-weight: bold;
+          }
+        }
+
+        a {
+          color: #010201;
+
+          &:hover {
+            color: #E06733;
+            font-weight: bold;
+            transition: color .3s;
+          }
+        }
+
+      }
+
+
+    }
+
+  }
+
+  .mobile-hamburger {
+    cursor: pointer;
+    display: none;
+  }
+
+  .welcome {
+    /*     @include flexbox(nowrap);
+    @include flex-align(space-between, center); */
+
+    padding: 0 27px 82px;
+
+    .welcome-bg {
+      .welcome-description {
+        width: 534.6px;
+        font-size: $regular-font-size;
+        padding: 33px 0 43px;
+        margin-left: auto;
+
+        &-paragraph {
+          @include primary-text(35px); //line-height is the parameter
+        }
+      }
+
+
+      background-image: url(../assets/img/leafs.png);
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+
+  }
+}
+
+
+@media all and (max-width: 649px) {
+  .header {
+    .nav {
+      padding-inline: 0;
+
+      .logo {
+        margin-inline: 0;
+      }
+    }
+
+    .welcome {
+      padding: 0;
+
+      .welcome-bg {
+        background-image: none;
+
+        .welcome-description {
+          width: 100%;
+          padding-top: 0;
+
+          &-paragraph {
+            @include primary-text($line-height: 25px, $font-size: 16px);
+            /*         margin: 0;
+        font-size: 15px;
+        line-height: 25px;
+        transform: translateY(-7px); */
+          }
+        }
+      }
+    }
+
+    .main-header {
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .header {
+
+    .nav {
+      .hamburger-menu {
+        position: fixed;
+        background-color: #edf2ec;
+        top: 80px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        left: 100%;
+
+        &.active {
+          left: 0;
+          opacity: 0.95;
+          transition-property: all;
+          transition-duration: .3s;
+          transition-delay: .1s;
+          transition-timing-function: ease;
+
+          a {
+            box-shadow: inset 0 0 0 0 #e06733;
+            display: inline-block;
+            width: 154px;
+            border-radius: 5px;
+            font-size: larger;
+
+            &:hover {
+              background-color: #E06733;
+              color: #fff;
+              box-shadow: inset 100px 0 0 0 #e06733;
+              transition: all .4s ease-in-out;
+            }
+
+          }
+
+        }
+
+        .menu-item {
+          display: block;
+          margin: 0;
+        }
+      }
+    }
+
+    .mobile-hamburger {
+      display: block;
+      position: relative;
+      width: 40px;
+      height: 26px;
+
+      .hamburger-line {
+        /* @extend %hamburger-line; */
+        position: absolute;
+
+        display: block;
+        width: 100%;
+        height: 2px;
+        //margin: 8px auto;
+        background-color: #717171;
+        transition: all 0.3s ease-in-out;
+
+        &:nth-of-type(1) {
+          top: 8px;
+        }
+
+        &:nth-of-type(2) {
+          top: 16px;
+        }
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+
+        display: block;
+        width: 100%;
+        height: 2px;
+        //margin: 8px auto;
+        background-color: #717171;
+        transition: all 0.3s ease-in-out;
+
+        /* @extend %hamburger-line; */
+
+      }
+
+      &::after {
+        bottom: 0;
+      }
+
+
+      &.active {
+
+        &::before {
+          transform: rotate(45deg);
+          top: 12px;
+        }
+
+        &::after {
+          transform: rotate(135deg);
+          bottom: 12px;
+        }
+
+        .hamburger-line {
+
+          &:nth-of-type(1),
+          &:nth-of-type(2) {
+            transform: scale(0);
+          }
+        }
+      }
+    }
+  }
+
+  /*     .welcome {
+      .welcome-bg {
+        max-width: 739px;
+        margin: auto;
+      }
+    } */
+}
+
+
+@media all and (min-width: 650px) and (max-width: 1139px) {
+  .header {
+    .main-header {
+      font-size: 35px;
+      margin: 0 0 36px;
+    }
+
+    .nav {
+      .logo {
+        margin: 12px 15px;
+      }
+
+      .menu {
+        padding-left: 7px;
+
+        .menu-item {
+          padding: 5px 0;
+          margin: 0 21px;
+        }
+      }
+
+    }
+
+    .welcome {
+      padding: 0px 27px 66px;
+
+      .welcome-bg {
+        background-image: url(../assets/img/leafs-tablet.png);
+        background-position: right;
+
+        .welcome-description {
+          margin-left: 0;
+          width: 343px;
+          height: 329px;
+          padding: 36px 0 0 5px;
+
+          &-paragraph {
+            @include primary-text($line-height: 25px, $font-size: $small-font-size);
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+@media all and (min-width: 1140px) and (max-width: 1439px) {
+  .header {
+    .welcome {
+      padding: 0 0px 82px;
+
+      .welcome-bg {
+        background-image: url("../assets/img/leafs-lg-tablet.png");
+
+        .welcome-description-paragraph {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .main-header {
+      font-size: 40px;
+    }
+  }
+}

@@ -1,0 +1,243 @@
+.service {
+  padding: 32px 0 133px;
+  background-color: $bg-color-section;
+
+  .service-header {
+    @include flex-align(start, center);
+
+    .service-heading {
+      margin: 0; //todo: wyniesc to do styli globalnych
+      color: #499A18;
+    }
+  }
+
+  .infoboxes {
+
+    @include flex-align(space-between, center);
+    margin-top: 70px;
+
+    .infobox-overlay {
+      //min-width: 280px;
+
+
+      .infobox {
+        height: 438px;
+        text-align: center;
+        padding: 0 40px;
+        margin-top: 49px;
+
+        .img-holder {
+          border-radius: 20px 20px 0 0;
+          height: 300px;
+          overflow: hidden;
+
+          .infobox-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            //vertical-align: top;
+          }
+        }
+
+        .infobox-caption {
+          border: 1px solid #cac7c7;
+          border-radius: 0 0 20px 20px;
+          border-top: 0;
+          padding: 6px 0;
+
+          .infobox-title {
+            @include primary-text(20px, 700, #E06733);
+          }
+        }
+
+      }
+    }
+  }
+
+  .buttons-panel {
+    margin-left: 43px;
+  }
+
+  .blurred {
+    filter: blur(2px);
+  }
+}
+
+@media all and (min-width: 1140px) and (max-width: 1439px) {
+  .service {
+    .infoboxes {
+      .infobox-overlay {
+        max-width: 350px;
+        /*         .infobox {
+          padding: 0px 25px;
+        } */
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1139px) {
+  .service {
+    padding: 32px 0 63px;
+
+    .infoboxes {
+      @include flex-align(space-evenly, center);
+      margin-top: 10px;
+
+      .infobox-overlay {
+
+        //min-width: 350px;
+        .infobox {
+          padding: 0px 26px;
+        }
+      }
+    }
+
+    .service-header {
+      .service-heading {
+        width: 331px;
+        margin: 0.83em 0;
+      }
+    }
+
+    .buttons-panel {
+      margin-left: 0;
+      margin-top: 12px;
+
+      .service-filter-button:nth-of-type(1) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+
+/* ponizsze media sa ustawione w kolejnosci malejacej by uwzglednic kaskadowosc */
+@media all and (max-width: 988px) {
+  .service {
+    .infoboxes {
+      .infobox-overlay {
+        .infobox {
+          padding: 0px 5.7vw;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 851px) {
+  .service {
+    .infoboxes {
+      .infobox-overlay {
+        .infobox {
+          padding: 0px 6vw;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 835px) {
+  .service {
+    .infoboxes {
+      .infobox-overlay {
+        .infobox {
+          padding: 0px 6vw;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 803px) {
+  .service {
+    .infoboxes {
+      .infobox-overlay {
+        .infobox {
+          padding: 0px 6vw;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .service {
+    .container {
+      padding: 20px;
+    }
+
+    .infoboxes {
+      //@include flex-align(center, center);
+
+      .infobox-overlay {
+
+        //min-width: auto;
+        .infobox {
+          padding: 0px 5vw;
+        }
+      }
+    }
+
+  }
+}
+
+@media all and (max-width: 649px) {
+  .service {
+    .container {
+      padding: 16px;
+    }
+    .infoboxes {
+      .infobox-overlay {
+        .infobox {
+          padding: 0px 22vw;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 513px) {
+  .service {
+    .infoboxes {
+      .infobox-overlay {
+        .infobox {
+          padding: 0px 19vw;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 440px) {
+  .service {
+    .infoboxes {
+      .infobox-overlay {
+        .infobox {
+          padding: 0px 12vw;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 431px) {
+  .service {
+    .infoboxes {
+      .infobox-overlay {
+        .infobox {
+          padding: 0px 13vw;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 408px) {
+  .service {
+    .infoboxes {
+      .infobox-overlay {
+        .infobox {
+          padding: 0px 8vw;
+        }
+      }
+    }
+  }
+}

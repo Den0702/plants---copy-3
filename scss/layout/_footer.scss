@@ -1,0 +1,41 @@
+.footer {
+  @include primary-text($line-height: 50px, $color: #010201);
+
+  .footer-container {
+    @include flexbox;
+    @include flex-align(space-between, center);
+    padding: 48px 100px;
+
+    .footer-contacts {
+      @include flexbox($flex-wrap: nowrap);
+      @include flex-align(space-between, center);
+      flex-basis: 165px;
+    }
+
+
+    .social-media {
+      @include flexbox($flex-wrap: nowrap);
+      @include flex-align(space-between, center);
+      flex-basis: 180px;
+
+      .social-item {
+        height: 32px;       
+      }
+
+    }
+    /* @include social-list; */
+
+  }
+}
+
+@media all and (max-width: 768px) {
+  .footer {
+    line-height: 33px;
+
+    .footer-container {
+      max-width: 415px;
+      padding: 28px 100px;
+      justify-content: center;
+    }
+  }
+}

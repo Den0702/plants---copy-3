@@ -1,0 +1,155 @@
+.contact {
+  padding-top: 32px;
+  background-color: $bg-color-section;
+
+  .contact-bg {
+    background-image: url("../assets/img/contact_woman 1.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 480px;
+
+    .contact-heading {
+      text-align: center;
+      color: #499a18;
+    }
+    
+    .contact-dropdown-holder {
+      @include flexbox;
+      justify-content: flex-end;
+    }
+
+    .contact-dropdown {
+      @include flexbox;
+      @include flex-align(space-between, center);
+
+      position: relative;
+      //align-self: flex-end;
+      //max-width: 450px;
+      flex-basis: 450px;
+      padding: 0px 30px;
+      background-color: #d6e7d2;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin: 0;
+
+      z-index: 10;
+
+      .placeholder {
+        @include primary-text($line-height: 52px);
+      }
+
+      .contact-dropdown-icon {
+        position: relative;
+        background-color: #aea1a1;
+      }
+
+      &.open {
+        .contact-dropdown-icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .select-list {
+      position: absolute;
+      background-color: #DCE9D9;
+
+      display: none;
+      overflow: hidden;
+      width: 100%;
+      margin-left: auto;
+      position: absolute;
+      top: 52px;
+      left: 0;
+
+      li {
+        cursor: pointer;
+        padding: 15px;
+
+        &:hover {
+          color: green;
+        }
+      }
+
+      &.open {
+        display: block;
+      }
+    }
+
+    .address {
+      display: none;
+
+      &.visible {
+        display: block;
+        width: fit-content;
+        border: 1px solid black;
+        padding: 0 20px;
+        border-radius: 7px;
+        margin: auto;
+        margin-top: 30px;
+        background-color: #EDF2EC;
+
+        position: relative;
+        z-index: 20;
+      }
+    }
+  }
+
+}
+
+@media all and (max-width: 649px) {
+  .contact {
+    .contact-bg {
+      background-image: url(../assets/img/contact_woman-mobile.png);
+      background-position: bottom;
+      height: 415px;
+
+      .contact-dropdown {
+        max-width: 350px;
+      }
+
+    }
+  }
+
+}
+
+@media all and (max-width: 767px) {
+  .contact {
+    .contact-bg {
+      .contact-dropdown {
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1139px) {
+  .contact-dropdown {
+    margin: auto;
+  }
+}
+
+@media all and (min-width: 650px) and (max-width: 1139px) {
+  .contact {
+    padding-top: 11px;
+
+    .contact-bg {
+      height: 695px;
+      background-image: url(../assets/img/contact_woman-tablet.png);
+      background-position: bottom;
+
+/*       .select-holder:hover {
+        width: 450px;
+        margin: auto;
+
+        .select-list {
+          display: block;
+        }
+      } */
+    }
+
+    .contact-heading {
+      font-size: 40px;
+      margin-bottom: 100px;
+    }
+  }
+}

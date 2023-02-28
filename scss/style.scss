@@ -1,0 +1,15 @@
+@import './utilities/variables';
+@import './utilities/mixins';
+
+@import './base/normalize';
+@import './base/global';
+
+@import './layout/grid';
+@import './layout/header';
+@import './layout/about';
+@import './layout/service';
+@import './layout/price';
+@import './layout/contact';
+@import './layout/footer';
+
+@import './components/buttons';
