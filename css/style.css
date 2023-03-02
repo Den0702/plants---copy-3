@@ -331,7 +331,7 @@ ul {
   }
 }
 @media all and (min-width: 1140px) and (max-width: 1439px) {
-  .container:not(.price .container) {
+  .container {
     max-width: 1140px;
   }
 }
@@ -941,6 +941,17 @@ ul {
     margin-bottom: 44px;
   }
 }
+@media all and (max-width: 1139px) {
+  .price .prices .price-list {
+    max-width: 300px;
+    padding: 26px;
+  }
+}
+@media all and (max-width: 919px) {
+  .price .container {
+    max-width: 100%;
+  }
+}
 @media all and (max-width: 767px) {
   .price .container {
     display: block;
@@ -955,10 +966,6 @@ ul {
 @media all and (max-width: 988px) {
   .price .prices .prices-heading {
     margin-bottom: 40px;
-  }
-  .price .prices .price-list {
-    max-width: 300px;
-    padding: 26px;
   }
   .price .prices .price-list .accordion-body.visible {
     margin: 0 24px 0;

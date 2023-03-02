@@ -98,8 +98,9 @@ ul {
 }
 
 @media all and (min-width: 1140px) and (max-width: 1439px) {
-  .container:not(.price .container) {
+  .container {
     max-width: 1140px;
     //padding: 0;
   }
+  
 }

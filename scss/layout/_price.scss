@@ -143,6 +143,25 @@
   }
 }
 
+@media all and (max-width: 1139px) {
+  .price {
+    .prices {
+      .price-list {
+        max-width: 300px;
+        padding: 26px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 919px) {
+  .price {
+    .container {
+      max-width: 100%;
+    }
+  }
+}
+
 @media all and (max-width: 767px) {
   .price {
     .container {
@@ -171,13 +190,10 @@
       }
 
       .price-list {
-        max-width: 300px;
-        padding: 26px;
-
         .accordion-body {
           &.visible {
             margin: 0 24px 0;
-            
+
             p {
               font-size: 12px;
             }
@@ -201,14 +217,14 @@
     .prices {
       .price-list {
         max-width: 270px;
-      
+
         .price-list-item {
           width: 100%;
         }
 
         .accordion-body {
           &.visible {
-            
+
             p {
               font-size: 12px;
             }
@@ -217,13 +233,14 @@
 
         .accordion-header {
           padding: 13px 30px;
-          
+
           span {
             font-size: 15px;
           }
         }
       }
     }
+
     .prices-help {
       background-image: none;
       height: auto;
@@ -231,7 +248,7 @@
       .btn {
         display: block;
         margin: auto;
-        
+
       }
     }
   }
