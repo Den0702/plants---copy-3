@@ -26,6 +26,7 @@
         background-color: #edf2ec;
         border-radius: 20px;
         margin-bottom: 15px;
+        overflow: hidden;
 
         &.open {
           background-color: #D6E7D2;
@@ -40,7 +41,12 @@
         @include flexbox;
         @include flex-align(space-between, center);
 
-        cursor: pointer;
+        &:hover {
+          cursor: pointer;
+          background-color: #d6e7d2;
+          transition: background-color .3s;
+        }
+
         padding: 16px 40px;
 
 

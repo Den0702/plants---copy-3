@@ -22,7 +22,7 @@
     @include flexbox($flex-wrap: nowrap);
     @include flex-align(space-between, center);
 
-    padding: 32px 15px;
+    padding-block: 32px;
 
     .logo {
       height: 22px;
@@ -37,7 +37,7 @@
     .menu {
       flex-basis: 501px;
       @include flexbox($flex-wrap: nowrap);
-      gap: 47px;
+      justify-content: space-between;
 
       .menu-item {
         padding: 20px 0;
@@ -57,7 +57,6 @@
 
           &:hover {
             color: #E06733;
-            font-weight: bold;
             transition: color .3s;
           }
         }
@@ -81,6 +80,10 @@
     padding: 0 27px 82px;
 
     .welcome-bg {
+      background-image: url(../assets/img/leafs.png);
+      background-repeat: no-repeat;
+      background-position: left;
+
       .welcome-description {
         width: 534.6px;
         font-size: $regular-font-size;
@@ -91,11 +94,6 @@
           @include primary-text(35px); //line-height is the parameter
         }
       }
-
-
-      background-image: url(../assets/img/leafs.png);
-      background-repeat: no-repeat;
-      background-position: left;
     }
 
   }
