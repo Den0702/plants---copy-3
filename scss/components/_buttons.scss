@@ -54,6 +54,11 @@
   margin-top: 10px;
 }
 
+.address-btn {
+  @extend %btn;
+  padding: 2px 35px;
+}
+
 .circle {
   width: 16px;
   height: 16px;

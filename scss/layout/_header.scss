@@ -82,12 +82,15 @@
     .welcome-bg {
       background-image: url(../assets/img/leafs.png);
       background-repeat: no-repeat;
-      background-position: left;
+      background-position-x: left;
+      //max-width: 1220px;
+      padding-top: 15px;
+      margin: auto;
 
       .welcome-description {
         width: 534.6px;
         font-size: $regular-font-size;
-        padding: 33px 0 43px;
+        padding-bottom: 66px;
         margin-left: auto;
 
         &-paragraph {
@@ -103,8 +106,6 @@
 @media all and (max-width: 649px) {
   .header {
     .nav {
-      padding-inline: 0;
-
       .logo {
         margin-inline: 0;
       }
@@ -138,11 +139,20 @@
   }
 }
 
+@media all and (max-width: 510px) {
+  .header {
+    .nav {
+      //padding: 32px 15px;
+    }
+  }
+}
+
 @media all and (max-width: 768px) {
   .header {
 
     .nav {
       .hamburger-menu {
+        display: block; //usuniecie flex'a
         position: fixed;
         background-color: #edf2ec;
         top: 80px;
@@ -178,7 +188,6 @@
         }
 
         .menu-item {
-          display: block;
           margin: 0;
         }
       }
@@ -262,6 +271,14 @@
     } */
 }
 
+@media all and (min-width: 768px) and (max-width: 1139px) {
+  .menu {
+    .menu-item {
+      padding: 5px 0;
+      margin: 0 21px;
+    }
+  }
+}
 
 @media all and (min-width: 650px) and (max-width: 1139px) {
   .header {
@@ -270,28 +287,20 @@
       margin: 0 0 36px;
     }
 
-    .nav {
+/*     .nav {
       .logo {
         margin: 12px 15px;
-      }
+      } 
 
-      .menu {
-        padding-left: 7px;
-
-        .menu-item {
-          padding: 5px 0;
-          margin: 0 21px;
-        }
-      }
-
-    }
+    }*/
 
     .welcome {
-      padding: 0px 27px 66px;
+      padding: 0px 5px 66px;
 
       .welcome-bg {
         background-image: url(../assets/img/leafs-tablet.png);
         background-position: right;
+        max-width: 735px;
 
         .welcome-description {
           margin-left: 0;
@@ -310,6 +319,7 @@
 
 }
 
+
 @media all and (min-width: 1140px) and (max-width: 1439px) {
   .header {
     .welcome {
@@ -317,6 +327,7 @@
 
       .welcome-bg {
         background-image: url("../assets/img/leafs-lg-tablet.png");
+        max-width: 965px;
 
         .welcome-description-paragraph {
           font-size: 18px;

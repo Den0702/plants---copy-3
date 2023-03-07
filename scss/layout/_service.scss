@@ -17,39 +17,51 @@
     margin-top: 70px;
 
     .infobox-overlay {
+
       //min-width: 280px;
-
-      .infobox {
-        height: 438px;
-        text-align: center;
-        padding: 0 40px;
-        margin-top: 49px;
-
-        .img-holder {
-          border-radius: 20px 20px 0 0;
-          height: 300px;
-          overflow: hidden;
-
-          .infobox-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            //vertical-align: top;
-          }
+      &.blurred {
+        .infobox:hover {
+          box-shadow: none;
         }
-
-        .infobox-caption {
-          border: 1px solid #cac7c7;
-          border-radius: 0 0 20px 20px;
-          border-top: 0;
-          padding: 6px 0;
-
-          .infobox-title {
-            @include primary-text(20px, 700, #E06733);
-          }
-        }
-
       }
+    }
+
+    .infobox {
+      //height: 438px;
+      text-align: center;
+      margin-inline: 40px;
+      margin-top: 49px;
+      border-radius: 20px;
+      cursor: pointer;
+      overflow: hidden;
+
+      &:hover {
+        box-shadow: 0 5px 20px rgb(0 0 0 / 25%);
+        transition: all .5s;
+      }
+
+      .img-holder {
+        height: 370px;
+
+        .infobox-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          //vertical-align: top;
+        }
+      }
+
+      .infobox-caption {
+        border: 1px solid #cac7c7;
+        border-radius: 0 0 20px 20px;
+        border-top: 0;
+        padding: 10px 0;
+
+        .infobox-title {
+          @include primary-text(20px, 700, #E06733);
+        }
+      }
+
     }
   }
 
@@ -62,14 +74,14 @@
   }
 }
 
-@media all and (min-width: 1140px) and (max-width: 1439px) {
+@media all and (min-width: 1200px) and (max-width: 1439px) {
   .service {
     .infoboxes {
-      .infobox-overlay {
-        max-width: 350px;
-        /*         .infobox {
-          padding: 0px 25px;
-        } */
+      .infobox {
+        //padding: 0px 25px;
+        .img-holder {
+          height: 320px;
+        }
       }
     }
   }
@@ -87,7 +99,8 @@
 
         //min-width: 350px;
         .infobox {
-          padding: 0px 26px;
+          //padding: 0px 26px;
+          margin-inline: 26px;
         }
       }
     }
@@ -96,6 +109,7 @@
       .service-heading {
         width: 331px;
         margin: 0.83em 0;
+        font-weight: 400;
       }
     }
 
@@ -118,40 +132,43 @@
     .infoboxes {
       .infobox-overlay {
         .infobox {
-          padding: 0px 5.7vw;
+          margin-inline: .7vw;
         }
       }
     }
   }
 }
+
 @media all and (max-width: 851px) {
   .service {
     .infoboxes {
       .infobox-overlay {
         .infobox {
-          padding: 0px 6vw;
+          margin-inline: 6vw;
         }
       }
     }
   }
 }
+
 @media all and (max-width: 835px) {
   .service {
     .infoboxes {
       .infobox-overlay {
         .infobox {
-          padding: 0px 6vw;
+          margin-inline: 6vw;
         }
       }
     }
   }
 }
+
 @media all and (max-width: 803px) {
   .service {
     .infoboxes {
       .infobox-overlay {
         .infobox {
-          padding: 0px 6vw;
+          margin-inline: 6vw;
         }
       }
     }
@@ -160,10 +177,6 @@
 
 @media all and (max-width: 767px) {
   .service {
-    .container {
-      padding: 20px;
-    }
-
     .infoboxes {
       //@include flex-align(center, center);
 
@@ -171,7 +184,7 @@
 
         //min-width: auto;
         .infobox {
-          padding: 0px 5vw;
+          margin-inline: 5vw;
         }
       }
     }
@@ -181,24 +194,22 @@
 
 @media all and (max-width: 649px) {
   .service {
-    .container {
-      padding: 16px;
-    }
     .infoboxes {
       .infobox-overlay {
         .infobox {
-          padding: 0px 22vw;
+          margin-inline: 2vw;
         }
       }
     }
   }
 }
+
 @media all and (max-width: 513px) {
   .service {
     .infoboxes {
       .infobox-overlay {
         .infobox {
-          padding: 0px 19vw;
+          margin-inline: 9vw;
         }
       }
     }
@@ -210,7 +221,7 @@
     .infoboxes {
       .infobox-overlay {
         .infobox {
-          padding: 0px 12vw;
+          margin-inline: 2vw;
         }
       }
     }
@@ -222,7 +233,7 @@
     .infoboxes {
       .infobox-overlay {
         .infobox {
-          padding: 0px 13vw;
+          margin-inline: 3vw;
         }
       }
     }
@@ -234,7 +245,7 @@
     .infoboxes {
       .infobox-overlay {
         .infobox {
-          padding: 0px 8vw;
+          margin-inline: 8vw;
         }
       }
     }

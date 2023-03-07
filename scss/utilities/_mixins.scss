@@ -16,11 +16,11 @@
   $font-weight: $primary-font-weight,
   $color: $main-text-color,
   $font-size: $regular-font-size) {
-  font-family: $primary-font-family;
-  line-height: $line-height;
-  font-weight: $font-weight;
-  color: $color;
-  font-size: $font-size;
+      font-family: $primary-font-family;
+      line-height: $line-height;
+      font-weight: $font-weight;
+      color: $color;
+      font-size: $font-size;
 }
 
 @mixin social-list {
